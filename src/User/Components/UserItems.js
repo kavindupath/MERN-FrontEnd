@@ -1,4 +1,5 @@
 import React from "react";
+// Component created
 
 const UserItem = (props) => {
   return (
