@@ -1,13 +1,16 @@
 import React from "react";
-import UserItem from "./UserItems";
-import "./UserList.css"
 
+import UserItem from "./UserItems";
+import "./UserList.css";
+import Card from "../../Shared/Components/UIElements/Card";
 
 const UserList = (props) => {
   if (props.items.length === 0) {
     return (
       <div className="center">
-        <h2>No items Found</h2>
+        <Card>
+          <h2>No items Found</h2>
+        </Card>
       </div>
     );
   }
@@ -21,7 +24,7 @@ const UserList = (props) => {
             id={user.id}
             image={user.image}
             name={user.name}
-            placeCount={user.places} 
+            placeCount={user.places}
           />
         );
       })}
